@@ -5,3 +5,6 @@ const ingredientSchema = new mongoose.Schema({
     required: true
   }
 })
+
+const Ingredient = mongoose.model('Ingredient', ingredientSchema)
+module.exports = Ingredient
