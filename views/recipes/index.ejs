@@ -6,12 +6,13 @@
     <title>My Recipes</title>
   </head>
   <body>
+    <%- include('../partials/_navbar.ejs') %>
     <h1>Welcome to My Recipes</h1>
-    <% if (recipes > 0) { %>
+    <% if (recipes) { %>
       <ul>
           <% recipes.forEach(recipe => { %>
               <li>
-                  <h2><%= recipe.name %></h2>
+                  <a href="/recipes/<%= recipe._id %>"><h2><%= recipe.name %></h2></a>
                   <p><%= recipe.instructions %></p>
               </li>
           <% }) %>
